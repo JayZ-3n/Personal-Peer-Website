@@ -1,135 +1,221 @@
-body{
-    margin: 0;
-    padding: 0;
-    background: #a8b9eb;
-}
-nav#topmenu ul{
-    list-style: none;
-    background-color: #1C2541;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-}
-nav#topmenu li{
-    font-size: 24px;
-    line-height: 40px;
-    height: 40px;
-    display: inline-block;
-    padding: 20px;
-}
-nav#topmenu a{
-    text-decoration: none;
-    color: #677dbe;
+body {
+  margin: 0;
+  background: #a8b9eb; 
+  font-size: 1rem;
+  padding: 15px;
+  font-family: Arial, sans-serif;
 }
 
-.profile{
-    width:250px;
-    height:250px;
-    align-content:center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-.trail{
-    width:300px;
-    height:450px;
-    align-content:center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-.stones{
-    width:300px;
-    height:450px;
-    align-content:left;
-    display: block;
-    margin-left: 10px;
-    margin-right: auto;
-}
-.people{
-    width:300px;
-    height:450px;
-    align-content:center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+/* --- Navigation System (Mobile Version) --- */
+nav#topmenu ul {
+  list-style: none;
+  background-color: #1C2541; 
+  text-align: center;
+  padding: 0;
+  margin: 0;
 }
 
-.hiking{
-    display: flex;
-    gap: 1px
+nav#topmenu li {
+  font-size: 24px;
+  display: block; 
+  padding: 15px 0;
 }
-.karate{
-     display: flex;
-    gap: 1px
-}
-.six{
-    width:300px;
-    height:450px;
-    align-content:center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-.group{
-    width:300px;
-    height:450px;
-    align-content:center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-.grading{
-    width:300px;
-    height:450px;
-    align-content:center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-.photography{
-    display: flex;
-    gap: 1px
-}
-.purp{
-     width:300px;
-    height:450px;
-    align-content:center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-.leaf{
-     width:300px;
-    height:450px;
-    align-content:center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-.sky{
-     width:300px;
-    height:450px;
-    align-content:center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-nav a {
-  color: #333333;              
-  text-decoration: none;       
-  padding: 10px 15px;          
+
+nav#topmenu a {
+  text-decoration: none;
+  color: #ffffff; 
+  padding: 10px 15px;
   transition: background 0.3s, color 0.3s; 
+  display: inline-block;
 }
 
-nav a:hover {
-  background-color: #99b7ba;   
-  color: #9A7B56;              
+nav#topmenu a:hover {
+  background-color: #99b7ba; 
+  color: #9A7B56;            
   border-radius: 4px;          
 }
-.favcolor{
-    text-align:center;
+
+/* --- Tables & Page Cards --- */
+.card {
+  background-color: #7b92c9; 
+  color: #090909;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #4a5d8a;
+  border-radius: 4px;
 }
-table{
-    color: rgb(6, 15, 77); 
+
+.table-container,
+.table-section {
+  width: 100%;
+  overflow-x: auto; /* Lets tables scroll smoothly on tiny phone screens */
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: white;
+  color: rgb(6, 15, 77); 
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.favcolor {
+  text-align: center;
+}
+
+/* Layout Structure & Responsive Images  */
+
+.top-row, 
+.layout-grid, 
+.bottom-section, 
+.portfolio-stack {
+  display: block; 
+}
+
+.image-gallery img,
+.karate img, 
+.hiking img, 
+.photography img {
+  width: 100%;
+  height: 250px;       
+  object-fit: cover;   
+  border-radius: 4px;
+  margin-bottom: 15px; 
+  display: block;
+}
+
+
+.profile {
+  width: 100%;
+  max-width: 250px; 
+  height: auto;
+  border-radius: 4px;
+  display: block;
+  margin: 15px auto;
+}
+.flag-icon {
+  width: 100%;
+  max-width: 150px;   /* Limits the width so it doesn't get overly large */
+  height: auto;       
+  display: block;
+  margin: 15px 0;   
+  border-radius: 2px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); 
+} 
+footer {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+
+/* 
+   2. TABLET STYLES (Triggers on display widths 768px and wider)
+*/
+@media (min-width: 768px) {
+  body {
+    padding: 30px;
+  }
+
+ 
+  .layout-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px;
+  }
+  
+  .card {
+    margin-bottom: 0; 
+  }
+
+ 
+  .karate, .hiking, .photography {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+  
+  .karate img, .hiking img, .photography img {
+    margin-bottom: 0;
+  }
+}
+
+
+/*
+   3. DESKTOP STYLES (Triggers on Computer monitors 1024px and wider)
+*/
+@media (min-width: 1024px) {
+ 
+  .page-wrapper {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 30px;
+    max-width: 1300px; 
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  
+  nav#topmenu {
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+    margin-bottom: 0;
+  }
+
+  nav#topmenu ul {
+    background-color: #1C2541;
+    border-radius: 4px;
+    padding: 10px 0;
+  }
+
+  nav#topmenu li {
+    display: block; 
+    font-size: 20px;
+    height: auto;
+    line-height: normal;
+    padding: 5px;
+    text-align: left;
+  }
+
+  nav#topmenu a {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .top-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 25px;
+    align-items: start;
+    margin-bottom: 30px;
+  }
+
+ 
+  .main-content .layout-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 20px;
+  }
+
+ 
+  .bottom-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+
+ 
+  .karate, .hiking, .photography {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
 }

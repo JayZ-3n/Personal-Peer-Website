@@ -3,37 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
     <title>Portfolio</title>
 </head>
 <body>
-    <nav id="topmenu">
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="About.html">About me</a></li>
-        <li><a href="Portfolio.html">Portfolio</a></li>
-        <li><a href="Contact.html">Contact information</a></li>
-    </ul>
-    </nav>
-<h1>CLUBS THAT JAYDON IS APART OF</h1>
-<h3>The Grenada Shotokan Karate Association</h3>
-<div class="karate">
- <img class="six" src="six.jpg" alt="This photo is showing six karate masters">
- <img class="group" src="group.jpg" alt="This is a group of karate masters">
- <img class="grading" src="grading.jpeg" alt="This is a photo of a guy who completed a grading for his next color belt">
-</div>
 
-<h3>TAMCC Hiking Club</h3>
-<div class="hiking">
- <img class="stones" src="stones.jpg" alt="These are students stepping over stones"> 
- <img class="trail" src="Trail.jpg" alt="This is a trail">
- <img class="people" src="people.jpg" alt="These are students walking through the bushes">
-</div>
-<h3> TAMCC Photography Club</h3>
-<div class="photography">
- <img class="purp" src="purpflower.jpg" alt="This is a puurple flower">
- <img class="leaf" src="leaf.jpg" alt="This is a red flower">
- <img class="sky" src="sky.jpg" alt="This is a beautiful sky">
-</div>
+<div class="page-wrapper">
+
+    <!-- 1. NAVIGATION MENU -->
+    <nav id="topmenu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About me</a></li>
+            <li><a href="Portfolio.html">Portfolio</a></li>
+            <li><a href="Contact.html">Contact information</a></li>
+        </ul>
+    </nav>
+    
+    <!-- 2. MAIN CONTENT WINDOW -->
+    <div class="main-content">
+        
+        <header class="title-card">
+            <h1>CLUBS THAT JAYDON IS APART OF</h1>
+        </header>
+
+        <!-- Main section containing your different club portfolio blocks -->
+        <main class="portfolio-stack">
+            
+            <!-- Karate Club Section -->
+            <section class="card">
+                <h2>The Grenada Shotokan Karate Association</h2>
+                <div class="image-gallery karate">
+                    <img class="six" src="six.jpg" alt="This photo is showing six karate masters">
+                    <img class="group" src="group.jpg" alt="This is a group of karate masters">
+                    <img class="grading" src="grading.jpeg" alt="This is a photo of a guy who completed a grading for his next color belt">
+                </div>
+            </section>
+
+            <!-- Hiking Club Section -->
+            <section class="card">
+                <h2>TAMCC Hiking Club</h2>
+                <div class="image-gallery hiking">
+                    <img class="stones" src="stones.jpg" alt="These are students stepping over stones"> 
+                    <img class="trail" src="Trail.jpg" alt="This is a trail">
+                    <img class="people" src="people.jpg" alt="These are students walking through the bushes">
+                </div>
+            </section>
+
+            <!-- Photography Club Section -->
+            <section class="card">
+                <h2>TAMCC Photography Club</h2>
+                <div class="image-gallery photography">
+                    <img class="purp" src="purpflower.jpg" alt="This is a puurple flower">
+                    <img class="leaf" src="leaf.jpg" alt="This is a red flower">
+                    <img class="sky" src="sky.jpg" alt="This is a beautiful sky">
+                </div>
+            </section>
+
+        </main>
+
+    </div> <!-- End Main Content -->
+</div> <!-- End Page Wrapper -->
+
+<footer>&copy; 2026 Jaydon Joseph. All rights reserved</footer>
+
 </body>
 </html>
