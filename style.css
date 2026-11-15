@@ -219,3 +219,20 @@ footer {
     gap: 20px;
   }
 }
+.large-text {
+    font-size: 1.25rem;
+    line-height: 1.6;
+}
+
+.highlight-detail{
+  background-color: #efe377cd;
+  color: #1C2541;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+b:hover, strong:hover {
+    background-color: rgb(255, 1, 1);
+    color: rgb(0, 0, 0);
+    transition: background-color 0.2s ease;
+}
