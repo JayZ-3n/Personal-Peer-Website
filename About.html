@@ -7,7 +7,7 @@
     <title>About Jaydon</title>
 </head>
 <body>
-
+<button id="textSizeBtn">Toggle Large Text</button>
 <div class="page-wrapper">
 
     <!-- 1. NAVIGATION MENU -->
@@ -31,6 +31,7 @@
             </header>
             
             <div class="table-container">
+                <button id="highlightBtn" style="margin-bottom: 10px; padding: 8px 15px; cursor: pointer;">Highlight My Details</button>
                 <table border="3">
                     <tr>
                         <th>Name</th>
@@ -41,12 +42,12 @@
                         <th>Education</th>
                     </tr>
                     <tr>
-                        <td>Jaydon Joseph</td>
-                        <td>Eighteen Years Old</td>
-                        <td>The 9th of September, 2008</td>
+                        <td class="personal-detail">Jaydon Joseph</td>
+                        <td class="personal-detail">Eighteen Years Old</td>
+                        <td class="personal-detail">The 9th of September, 2008</td>
                         <td class="favcolor">Yellow</td>
-                        <th>Brizan</th>
-                        <td>
+                        <th class="personal-detail">Brizan</th>
+                        <td class="personal-detail">
                             <ul>
                                 <li>Brizan Pre-School</li>
                                 <li>Happy Hill Primary School</li>
@@ -119,6 +120,8 @@
 </div> <!-- End Page Wrapper -->
 
 <footer><i> &copy; 2026 Jaydon Joseph. All rights reserved </i></footer>
-
+<p>Current Date & Time: <span id="current-datetime"></span></p>
+<p>Window Dimensions: <span id="window-dimensions"></span></p>
+<script src="script.js"></script>
 </body>
 </html>
